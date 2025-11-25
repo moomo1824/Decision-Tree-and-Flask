@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Titanic Input Form</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #800020, #660033); 
+        }
+
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            width: 320px;
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            padding: 8px;
+            margin: 6px 0 14px 0;
+            width: 90%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #800020;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Titanic Data Input</h2>
+
+    <form action="/predict" method="post">
+
+        <label>Pclass:</label><br>
+        <input type="text" name="pclasss" required><br>
+
+        <label>Sex:</label><br>
+        <input type="text" name="sexx" required><br>
+
+        <label>Age:</label><br>
+        <input type="text" name="agee" required><br>
+
+        <label>Sibsp:</label><br>
+        <input type="text" name="sibspp" required><br>
+
+        <label>Parch:</label><br>
+        <input type="text" name="parchh" required><br>
+
+        <label>Fare:</label><br>
+        <input type="text" name="faree" required><br>
+
+        <label>Class:</label><br>
+        <input type="text" name="classs" required><br>
+
+        <label>Who:</label><br>
+        <input type="text" name="whoo" required><br>
+
+        <label>Adult Male:</label><br>
+        <input type="text" name="adult_malee" required><br>
+
+        <label>Deck:</label><br>
+        <input type="text" name="deckk" required><br>
+
+        <label>Embark Town:</label><br>
+        <input type="text" name="embark_townn" required><br>
+
+        <label>Alive:</label><br>
+        <input type="text" name="alivee" required><br>
+
+        <label>Alone:</label><br>
+        <input type="text" name="alonee" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <h3>{{predicted_text}}</h3>
+</div>
+
+</body>
+</html>
